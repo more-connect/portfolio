@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>大村かえでと申します</title>
+    <meta name="description" content="地元福岡でweb制作をしています" />
+    <!-- ファビコン -->
+    <link rel="icon" href="" />
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- フォントスタイル -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/assets/js/script.js" defer></script>
+    <script>
+      let submitted = false;
+    </script>
+    <iframe
+      name="hidden_iframe"
+      style="display: none"
+      onload="if(submitted){window.location='thanks.html';}"
+    ></iframe>
+  </head>
+
+  <body>
+    <nav id="gnav" class="gnav" aria-label="メインメニュー">
+      <ul class="gnav__list">
+        <li class="gnav__item">
+          <a href="/" class="gnav__link">top</a>
+        </li>
+        <li class="gnav__item">
+          <a href="../#about" class="gnav__link">about</a>
+        </li>
+        <li class="gnav__item">
+          <a href="../#service" class="gnav__link">service</a>
+        </li>
+        <li class="gnav__item">
+          <p class="gnav__link" aria-current="page">contact</p>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main-contents">
+      <section class="section _page">
+        <div class="container _narrow">
+          <h1 class="section-title">
+            <span class="section-title__main">お問い合わせ</span>
+          </h1>
+
+          <p class="page-lead">
+            お問い合わせ・ご相談等は以下のフォームからご連絡下さい。
+          </p>
+
+          <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScfxiZ1tfrpKw9h_KiDGwMLShg9NBdaglVcp5CY3MF0h79xKA/formResponse"
+            method="post"
+            target="hidden_iframe"
+            onsubmit="submitted=true;"
+          >
+            <table class="contact-table">
+              <tr>
+                <th>
+                  お名前(会社名)<span class="require" aria-hidden="true"
+                    >必須</span
+                  >
+                </th>
+                <td><input type="text" name="entry.1323083721" required /></td>
+              </tr>
+              <tr>
+                <th>お問い合わせ内容</th>
+                <td>
+                  <div class="select-wrap">
+                    <select name="entry.1399813406" id="contact_type" required>
+                      <option value="" selected disabled>選択して下さい</option>
+                      <option value="新規サイトの開設">新規サイトの開設</option>
+                      <option value="サイトリニューアル">
+                        サイトリニューアル
+                      </option>
+                      <option value="WordPress導入">WordPress導入</option>
+                      <option value="その他のお問合せ">
+                        その他のお問合せ・ご相談など
+                      </option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  メールアドレス<span class="require" aria-hidden="true"
+                    >必須</span
+                  >
+                </th>
+                <td><input type="email" name="entry.698011933" required /></td>
+              </tr>
+              <tr>
+                <th>お問合わせ詳細</th>
+                <td><textarea name="entry.595468395"></textarea></td>
+              </tr>
+            </table>
+            <div class="btn-center">
+              <button type="submit" class="btn btn--lg btn--action btn--next">
+                上記内容で送信する
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">
+        <small lang="en">&copy; kaedePortfolio 2022</small>
+      </p>
+    </footer>
+  </body>
+</html>
