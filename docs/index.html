@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <title>大村と申します</title>
-    <meta name="description" content="地元福岡でweb制作をしています。" />
+    <meta name="description" content="地元福岡でweb制作をしています" />
     <!-- ファビコン -->
     <link rel="icon" href="" />
 
-    <link rel="stylesheet" href="https://more-connect.github.io/portfolio/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <!-- フォントスタイル -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Noto+Sans+JP:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://more-connect.github.io/portfolio/assets/js/script.js" defer></script>
+    <script src="/assets/js/script.js" defer></script>
   </head>
 
   <body>
@@ -36,6 +36,9 @@
         </li>
         <li class="gnav__item">
           <a href="#service" class="gnav__link">service</a>
+        </li>
+        <li class="gnav__item">
+          <a href="#works" class="gnav__link">works</a>
         </li>
         <li class="gnav__item">
           <a href="#contact" class="gnav__link">contact</a>
@@ -67,7 +70,7 @@
             </p>
           </div>
         </section>
-        <section class="section">
+        <section class="section section--bg">
           <h1 class="section-title" id="about">
             <span class="section-title__main">スキル</span>
             <span class="section-title__sub_reverse">skill</span>
@@ -75,64 +78,54 @@
           <div class="skill">
             <div class="skill-list">
               <div class="skill__item">
-                <div class="skill__title">
-                  <p>HTML</p>
-                </div>
                 <div class="skill__icon">
                   <img
-                    src="https://more-connect.github.io/portfolio/assets/img/html5-brands.svg"
+                    src="/assets/img/html5-brands.svg"
                     aria-hidden="true"
                     class="skill__icon-img"
                   />
                 </div>
+                <p class="skill__title">HTML</p>
               </div>
               <div class="skill__item">
-                <div class="skill__title">
-                  <p>CSS</p>
-                </div>
                 <div class="skill__icon">
                   <img
-                    src="https://more-connect.github.io/portfolio/assets/img/css3-alt-brands.svg"
+                    src="/assets/img/css3-alt-brands.svg"
                     aria-hidden="true"
                     class="skill__icon-img"
                   />
                 </div>
+                <p class="skill__title">CSS</p>
               </div>
               <div class="skill__item">
-                <div class="skill__title">
-                  <p>Sass</p>
-                </div>
                 <div class="skill__icon">
                   <img
-                    src="https://more-connect.github.io/portfolio/assets/img/sass-brands.svg"
+                    src="/assets/img/sass-brands.svg"
                     aria-hidden="true"
                     class="skill__icon-img"
                   />
                 </div>
+                <p class="skill__title">Sass</p>
               </div>
               <div class="skill__item">
-                <div class="skill__title">
-                  <p>JavaScript</p>
-                </div>
                 <div class="skill__icon">
                   <img
-                    src="https://more-connect.github.io/portfolio/assets/img/js-square-brands.svg"
+                    src="/assets/img/js-square-brands.svg"
                     aria-hidden="true"
                     class="skill__icon-img"
                   />
                 </div>
+                <p class="skill__title">JavaScript</p>
               </div>
               <div class="skill__item">
-                <div class="skill__title">
-                  <p>WordPress</p>
-                </div>
                 <div class="skill__icon">
                   <img
-                    src="https://more-connect.github.io/portfolio/assets/img/wordpress-brands.svg"
+                    src="/assets/img/wordpress-brands.svg"
                     aria-hidden="true"
                     class="skill__icon-img"
                   />
                 </div>
+                <p class="skill__title">WordPress</p>
               </div>
             </div>
           </div>
@@ -167,8 +160,8 @@
               </div>
               <figure class="alternate__thumb">
                 <img
-                  src="https://more-connect.github.io/portfolio/assets/img/skil.jpeg"
-                  alt=""
+                  src="../assets/img/skil.jpeg"
+                  alt="コーディングのイメージ写真"
                 />
               </figure>
             </div>
@@ -189,16 +182,60 @@
                 </div>
               </div>
               <figure class="alternate__thumb">
-                <img src="https://more-connect.github.io/portfolio/assets/img/cms.jpeg" alt="" />
+                <img src="../assets/img/cms.jpeg" alt="CMSのイメージ写真" />
               </figure>
             </div>
           </div>
+        </section>
+        <section class="section">
+          <h1 class="section-title" id="works">
+            <span class="section-title__main">制作例</span>
+            <span class="section-title__sub_reverse">works</span>
+          </h1>
+          <ul class="works__list">
+            <li class="works__item">
+              <div class="works__img">
+                <img src="/assets/img/kinder-garten.jpg" alt="" />
+              </div>
+              <div class="works__body">
+                <h2 class="works__title">幼稚園のサイト(サンプルサイト)</h2>
+                <p class="works__txt">
+                  制作期間：2週間<br />
+                  html,css(sass),自作Javascriptでのスライダー
+                </p>
+                <p class="works__txt">
+                  幼稚園のサイトなので、画像やボタンを丸くし、やわらかいイメージで。
+                </p>
+                <p class="works__txt">あまり要素を入れず、シンプルに。</p>
+                <a href="" class="btn btn--next">webサイトへ</a>
+              </div>
+            </li>
+            <li class="works__item _reverse">
+              <div class="works__img">
+                <img src="/assets/img/dental.jpg" alt="" />
+              </div>
+              <div class="works__body">
+                <h2 class="works__title">歯医者のサイト(サンプルサイト)</h2>
+                <p class="works__txt">
+                  制作期間：1週間<br />
+                  html,css(sass),swiper.js
+                </p>
+                <p class="works__txt">
+                  シンプルで清潔感が出るようなイメージで。
+                </p>
+                <p class="works__txt">
+                  デザインに統一感を出し、コーディングに時間をかけずに作成。
+                </p>
+                <a href="" class="btn btn--next">webサイトへ</a>
+              </div>
+            </li>
+          </ul>
         </section>
 
         <section class="section">
           <h1 class="section-title" id="contact">
             <span class="section-title__main">お問合わせ</span>
-            <span class="section-title__sub_reverse">contact</span>
+            <span class="section-title__sub">contact</span>
             <p class="section__lead">
               あなたはこんな悩みをお持ちでないですか？
             </p>
@@ -219,7 +256,7 @@
 
           <div class="btn-center">
             <a
-              href="https://more-connect.github.io/portfolio/contact/index.html"
+              href="/contact/index.html"
               class="btn btn--action btn--next btn--lg"
               >お問合わせページへ</a
             >
