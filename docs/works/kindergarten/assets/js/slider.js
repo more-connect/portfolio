@@ -1,20 +1,14 @@
 (() => {
-   // スライダー全体を囲むエリア
+// スライダー全体を囲むエリア
 const $slider = document.querySelector('.sliders');
-// スライダーの各スライド
 const $slides = document.querySelectorAll('.slider-item');
-// スライドを左へ戻すカーソルボタン
 const $prev = document.querySelector('.slider-cursor-left');
-// スライドを右へ進めるカーソルボタン
 const $next = document.querySelector('.slider-cursor-right');
-// 何番目のスライドが表示されているかを表示するインジケーター
 const $indicators = document.querySelector('.slider-indicators');
-// 全体のスライド数
 const $slideLen = $slides.length;
-// 現在のスライドが何番目かをカウントする変数
 let currentslideCount = 0;
 
-// スライドの数だけインジケーターの生成を行う
+// スライドの数だけインジケーターの生成
 // また、1枚目のスライドの初期位置はleft: 0%にして、それ以降のスライドはそれぞれ100%ずつ右に移動させる
 for (let i = 0; i < $slideLen; i++ ) {
   let $indicator = document.createElement('li');
@@ -58,7 +52,7 @@ function update() {
 
 
 // スライドを1枚戻す関数
-// もし現在のスライドが1番目だった場合、最後のスライドまで移動させる
+// もし現在のスライドが1番目だった場合、最後のスライドへ
 function prevSlider() {
   initialize();
   if( currentslideCount === 0 ) {
@@ -71,7 +65,7 @@ function prevSlider() {
 
 
 // スライドを1枚進める関数
-// もし現在のスライドが最後だった場合、最初のスライドに移動させる
+// もし現在のスライドが最後だった場合、最初のスライドへ
 function nextSlider() {
   initialize();
   if( currentslideCount === ( $slideLen - 1 )) {
@@ -93,8 +87,7 @@ let dist = 30;
 
 $slides.forEach(function(el) {
 
-  // スライドをスワイプする際に、touchstart時とtouchmove時でのスワイプ操作のX座標を計測する。
-  // touchend時点で、touchstartのX座標の値が、touchmoveのそれより大きければ左スワイプ、小さければ右スワイプとなる
+
   el.addEventListener('touchstart', function(e) {
     e.preventDefault();
     startX = e.touches[0].pageX;
@@ -111,7 +104,6 @@ $slides.forEach(function(el) {
     }
   });
 
-  // マウス操作の場合
   el.addEventListener('mousedown', function(e) {
     e.preventDefault();
     startX = e.pageX;
