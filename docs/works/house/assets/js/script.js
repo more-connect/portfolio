@@ -4,8 +4,6 @@ $(function () {
 
   //ハンバーガーボタンを $triggerに格納
   const $trigger = $("#hamburger");
-  //SPメニュー $navに格納
-  const $menu = $("#menu");
   //ヘッダーのブレイクポイントを point_headerに格納
   const point_header = window.matchMedia("screen and (max-width: 960px)");
 
@@ -46,46 +44,4 @@ $(function () {
     }
   }
   point_header.addListener(checkBreakPoint);
-
-  //簡易バリデーション
-  //--------------------------------------------
-  $("input,textarea,select").each(function () {
-    $(this).on("change", function () {
-      if ($(this).is(":invalid")) {
-        $(this).parents(".input-field").addClass("is-error");
-        //そのフォームのエラーメッセージをスクリーンリーダー向けに表示
-        $(this)
-          .parents(".input-field")
-          .find(".error-text")
-          .attr("aria-hidden", false);
-      } else {
-        $(this).parents(".input-field").removeClass("is-error");
-        //エラーメッセージをスクリーンリーダーから隠す
-        $(this)
-          .parents(".input-field")
-          .find(".error-text")
-          .attr("aria-hidden", true);
-      }
-    });
-  });
-
-  $("#submit").on("click", function () {
-    $("input,textarea,select").each(function () {
-      if ($(this).is(":invalid")) {
-        $(this).parents(".input-field").addClass("is-error");
-        //そのフォームのエラーメッセージをスクリーンリーダー向けに表示
-        $(this)
-          .parents(".input-field")
-          .find(".error-text")
-          .attr("aria-hidden", false);
-      } else {
-        $(this).parents(".input-field").removeClass("is-error");
-        //エラーメッセージをスクリーンリーダーから隠す
-        $(this)
-          .parents(".input-field")
-          .find(".error-text")
-          .attr("aria-hidden", true);
-      }
-    });
-  });
 });
