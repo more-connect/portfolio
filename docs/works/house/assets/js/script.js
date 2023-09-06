@@ -36,12 +36,4 @@ $(function () {
       pagetop.fadeOut();
     }
   });
-
-  // //ブレイクポイントをまたいだときの挙動
-  function checkBreakPoint() {
-    if (point_header.matches) {
-      closeMenu(); //ハンバーガーメニューをリセット
-    }
-  }
-  point_header.addListener(checkBreakPoint);
 });

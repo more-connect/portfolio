@@ -32,13 +32,6 @@ $(function () {
 
   document.getElementById("gnav").addEventListener("click", function () {
     $("#header").removeClass("open");
-  }); // 追加
+  });
 
-  // //ブレイクポイントをまたいだときの挙動
-  function checkBreakPoint() {
-    if (point_header.matches) {
-      closeMenu(); //ハンバーガーメニューをリセット
-    }
-  }
-  point_header.addListener(checkBreakPoint);
 });
