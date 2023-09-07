@@ -8,7 +8,7 @@ $(function () {
       const scrollPos = $(window).scrollTop();
       const wh = $(window).height();
 
-      if (scrollPos > elemOffset - wh + wh / 2) {
+      if (scrollPos > elemOffset - wh + wh / 3) {
         $(this).addClass(isAnimate);
       }
     });
