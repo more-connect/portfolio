@@ -4,8 +4,6 @@ $(function () {
 
   //ハンバーガーボタンを $triggerに格納
   const $trigger = $("#hamburger");
-  //ヘッダーのブレイクポイントを point_headerに格納
-  const point_header = window.matchMedia("screen and (max-width: 960px)");
 
   //ハンバーガーメニューボタンがクリックされた時
   $trigger.on("click", function () {

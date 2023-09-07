@@ -2,10 +2,6 @@ $(function () {
   //ハンバーガーメニュー
   //--------------------------------------------
   const $trigger = $("#hamburger");
-  //SPメニュー $navに格納
-  const $menu = $("#menu");
-  //ヘッダーのブレイクポイントを point_headerに格納
-  const point_header = window.matchMedia("screen and (max-width: 960px)");
   const mvH = $("#mvH").outerHeight(true);
 
   function Bgcchange() {
