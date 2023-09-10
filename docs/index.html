@@ -7,9 +7,9 @@
     <title>大村と申します</title>
     <meta name="description" content="地元福岡でweb制作をしています" />
     <link
-      rel="stylesheet"
       href="https://more-connect.github.io/portfolio/assets/css/style.css"
-      />
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       href="https://more-connect.github.io/portfolio/assets/favicon.ico"
@@ -17,6 +17,10 @@
     <!-- フォントスタイル -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Noto+Sans+JP:wght@400;700&display=swap"
       rel="stylesheet"
@@ -26,7 +30,10 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script src="https://more-connect.github.io/portfolio/assets/js/script.js" defer></script>
+    <script
+      src="https://more-connect.github.io/portfolio/assets/js/script.js"
+      defer
+    ></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -51,22 +58,30 @@
     <nav id="gnav" class="gnav" aria-label="メインメニュー">
       <ul class="gnav__list">
         <li class="gnav__item">
-          <a href="#top" class="gnav__link">top</a>
-        </li>
-        <li class="gnav__item">
           <a href="#about" class="gnav__link">about</a>
         </li>
         <li class="gnav__item">
           <a href="#service" class="gnav__link">service</a>
         </li>
         <li class="gnav__item">
+          <a href="#features" class="gnav__link">features</a>
+        </li>
+        <li class="gnav__item">
           <a href="#works" class="gnav__link">works</a>
+        </li>
+        <li class="gnav__item">
+          <a href="#flow" class="gnav__link">flow</a>
         </li>
         <li class="gnav__item">
           <a href="#contact" class="gnav__link">contact</a>
         </li>
       </ul>
     </nav>
+    <button id="hamburger" class="hamburger">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
 
     <main class="main-contents">
       <div class="container _narrow">
@@ -164,6 +179,7 @@
           <div class="alternate-box">
             <div class="alternate _normal">
               <div class="alternate__body">
+                <i class="fa-solid fa-laptop-code icon"></i>
                 <h2 class="alternate__title">コーディング</h2>
                 <div class="alternate__txt">
                   <p class="service-card__text">
@@ -190,32 +206,88 @@
 
             <div class="alternate _reverse">
               <div class="alternate__body">
-                <h2 class="alternate__title">CMS</h2>
+                <i class="fa-solid fa-gears icon"></i>
+                <h2 class="alternate__title">ホームページ修正</h2>
                 <div class="alternate__txt">
                   <p class="service-card__text">
-                    CMSとは、web制作の知識がない方でも<br />記事の更新や、画像の登録・更新などが簡単にできるシステムです。<br />
-                    その中でも、シェアトップを誇るWordPressを使用し、<br />
-                    お客様の日々のサイト更新の負担を減らすことができます。<br />
+                    文章・画像の変更、表示崩れの修正、情報の更新など<br>
+                    既存のホームページで変更を加えたいというお困りごとに対応させていただきます。<br>
+                    お問い合わせフォームの構築も行います。
                   </p>
+                </div>
+              </div>
+              <figure class="alternate__thumb" style="font-size: .6em;text-align: right;">
+                <img
+                  src="https://more-connect.github.io/portfolio/assets/img/notepc.jpg"
+                  alt="CMSのイメージ写真"
+                />
+              </figure>
+            </div>
+            <div class="alternate _normal">
+              <div class="alternate__body">
+                <i class="fa-brands fa-wordpress-simple icon"></i>
+                <h2 class="alternate__title">WordPress</h2>
+                <div class="alternate__txt">
                   <p class="service-card__text">
-                    オリジナルテーマ作成および、<br />静的サイトのWordPress化にも対応可能です。<br />
-                    更新性の高いサイトを作成し、運用しやすいサイトを構築します。
+                    WordPressを用いてWebサイトの構築を行います。<br />
+                    既存のホームページのWordPress化も可能です。<br>
+                    また、テーマのカスタマイズや、プラグインの追加なども行います。
                   </p>
                 </div>
               </div>
               <figure class="alternate__thumb">
                 <img
-                  src="https://more-connect.github.io/portfolio/assets/img/cms.jpeg"
-                  alt="CMSのイメージ写真"
+                  src="https://more-connect.github.io/portfolio/assets/img/WordPress.jpg"
+                  alt="ワードプレスのイメージ写真"
                 />
               </figure>
             </div>
           </div>
         </section>
+
+        <section class="section section--bg">
+          <h1 class="section-title" id="features">
+            <span class="section-title__main">特徴</span>
+            <span class="section-title__sub_reverse fadeIn">features</span>
+          </h1>
+          <div class="features__list">
+            <div class="features__item">
+              <h2 class="features-title">
+                <span class="features-title__main">即納</span>
+                <div class="features-title__sub">
+                  <span class="point">POINT</span><br>
+                  <span class="num">01</span>
+                </div>
+              </h2>
+              <p class="features__text">迅速・丁寧なコーディングで、早めの納品を目指します。</p>
+            </div>
+            <div class="features__item">
+              <h2 class="features-title">
+                <span class="features-title__main">忠実</span>
+                <div class="features-title__sub">
+                  <span class="point">POINT</span><br>
+                  <span class="num">02</span>
+                </div>
+              </h2>
+              <p class="features__text">デザインの自由度が低いWordPressも、お客様のイメージ通りにお作りできます。</p>
+            </div>
+            <div class="features__item">
+              <h2 class="features-title">
+                <span class="features-title__main">アフターフォロー</span>
+                <div class="features-title__sub">
+                  <span class="point">POINT</span><br>
+                  <span class="num">03</span>
+                </div>
+              </h2>
+              <p class="features__text">公開後も、デザインの調整や機能の追加、他お困りごとがございましたらフォローいたします。</p>
+            </div>
+          </div>
+        </section>
+
         <section class="section">
           <h1 class="section-title" id="works">
             <span class="section-title__main">制作例</span>
-            <span class="section-title__sub_reverse fadeIn">works</span>
+            <span class="section-title__sub fadeIn">works</span>
           </h1>
           <ul class="works__list">
             <li class="works__item">
@@ -282,10 +354,110 @@
           </ul>
         </section>
 
+        <section class="section section--bg _diagonal">
+          <h1 class="section-title" id="flow">
+            <span class="section-title__main">制作の流れ</span>
+            <span class="section-title__sub_reverse fadeIn">flow</span>
+          </h1>
+          <div class="flow">
+            <h2 class="flow-title">
+              <span class="flow-title__main">お問い合わせ、ご相談</span>
+              <div class="flow-title__sub">
+                <span class="point">STEP</span><br>
+                <span class="num">01</span>
+              </div>
+            </h2>
+            <h2 class="flow-title">
+              <span class="flow-title__main">お打ち合わせ（ヒアリング）</span>
+              <div class="flow-title__sub">
+                <span class="point">STEP</span><br>
+                <span class="num">02</span>
+              </div>
+            </h2>
+            <h2 class="flow-title">
+              <span class="flow-title__main">お見積り、スケジュール、ご確認</span>
+              <div class="flow-title__sub">
+                <span class="point">STEP</span><br>
+                <span class="num">03</span>
+              </div>
+            </h2>
+            <h2 class="flow-title">
+              <span class="flow-title__main">コーディング</span>
+              <div class="flow-title__sub">
+                <span class="point">STEP</span><br>
+                <span class="num">04</span>
+              </div>
+            </h2>
+            <h2 class="flow-title">
+              <span class="flow-title__main">お客様確認・修正</span>
+              <div class="flow-title__sub">
+                <span class="point">STEP</span><br>
+                <span class="num">05</span>
+              </div>
+            </h2>
+            <h2 class="flow-title">
+              <span class="flow-title__main">納品</span>
+              <div class="flow-title__sub">
+                <span class="point">STEP</span><br>
+                <span class="num">06</span>
+              </div>
+            </h2>
+          </div>
+        </section>
+
+        <section class="section">
+          <h1 class="section-title" id="price">
+            <span class="section-title__main">料金</span>
+            <span class="section-title__sub fadeIn">price</span>
+            <p class="section__lead">
+              下記は参考価格です。<br>
+              ドメイン、サーバーはお客様によるご負担が必要になります。<br>
+              全てコーディングのみとなります。
+            </p>
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>HTML</th>
+                  <th>WordPress</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TOPページ</td>
+                  <td>10,000円〜</td>
+                  <td>15,000円～</td>
+                </tr>
+                <tr>
+                  <td>下層ページ</td>
+                  <td>5,000円～/1P</td>
+                  <td>10,000円～/1P</td>
+                </tr>
+                <tr>
+                  <td>LP</td>
+                  <td colspan="2">10,000円〜</td>
+                </tr>
+                <tr>
+                  <td>レスポンシブ対応</td>
+                  <td colspan="2">8,000円〜</td>
+                </tr>
+                <tr>
+                  <td>WordPress導入・設定</td>
+                  <td colspan="2">50,000円〜</td>
+                </tr>
+                <tr>
+                  <td>サイト修正</td>
+                  <td colspan="2">要相談</td>
+                </tr>
+              </tbody>
+            </table>
+          </h1>
+
+        </section>
         <section class="section">
           <h1 class="section-title" id="contact">
             <span class="section-title__main">お問合わせ</span>
-            <span class="section-title__sub fadeIn">contact</span>
+            <span class="section-title__sub_reverse fadeIn">contact</span>
             <p class="section__lead">
               あなたはこんな悩みをお持ちでないですか？
             </p>

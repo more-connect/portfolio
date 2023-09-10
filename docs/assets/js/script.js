@@ -1,16 +1,1 @@
-$(function () {
-  $(window).on("scroll", function () {
-    let elem = $(".fadeIn");
-    const isAnimate = "isAnimate";
-
-    elem.each(function () {
-      const elemOffset = $(this).offset().top;
-      const scrollPos = $(window).scrollTop();
-      const wh = $(window).height();
-
-      if (scrollPos > elemOffset - wh + wh / 3) {
-        $(this).addClass(isAnimate);
-      }
-    });
-  });
-});
+$(function(){$(window).on("scroll",function(){let elem=$(".fadeIn");const isAnimate="isAnimate";elem.each(function(){const elemOffset=$(this).offset().top;const scrollPos=$(window).scrollTop();const wh=$(window).height();if(scrollPos>elemOffset-wh+wh/3){$(this).addClass(isAnimate)}})});const $trigger=$("#hamburger");$trigger.on("click",function(){if($("#hamburger").hasClass("open")){$("#hamburger").removeClass("open");$("#gnav").removeClass("open")}else{$("#hamburger").addClass("open");$("#gnav").addClass("open")}});document.getElementById("gnav").addEventListener("click",function(){$("#hamburger").removeClass("open");$("#gnav").removeClass("open")})})
