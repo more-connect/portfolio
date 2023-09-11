@@ -4,39 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
-    <title>大村かえでと申します</title>
+    <title>大村と申します</title>
     <meta name="description" content="地元福岡でweb制作をしています" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="icon" href='https://more-connect.github.io/portfolio/assets/favicon.ico' />
+    <link
+      href="https://more-connect.github.io/portfolio/assets/css/style.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://more-connect.github.io/portfolio/assets/favicon.ico"
+    />
     <!-- フォントスタイル -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Noto+Sans+JP:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://more-connect.github.io/portfolio/assets/js/script.js"
+      defer
+    ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0BQVM7FECL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-0BQVM7FECL");
+    </script>
   </head>
 
   <body>
+    <header class="header container header__inner" id="top">
+      <span class="header__txt">Welcome to My Portfolio!</span>
+    </header>
+
     <nav id="gnav" class="gnav" aria-label="メインメニュー">
       <ul class="gnav__list">
         <li class="gnav__item">
-          <a href="/" class="gnav__link">top</a>
+          <a href="#about" class="gnav__link">about</a>
         </li>
         <li class="gnav__item">
-          <a href="../#about" class="gnav__link">about</a>
+          <a href="#service" class="gnav__link">service</a>
         </li>
         <li class="gnav__item">
-          <a href="../#service" class="gnav__link">service</a>
+          <a href="#features" class="gnav__link">features</a>
         </li>
         <li class="gnav__item">
-          <a href="../#works" class="gnav__link">works</a>
+          <a href="#works" class="gnav__link">works</a>
         </li>
         <li class="gnav__item">
-          <p class="gnav__link" aria-current="page">contact</p>
+          <a href="#flow" class="gnav__link">flow</a>
+        </li>
+        <li class="gnav__item">
+          <a href="#price" class="gnav__link">price</a>
+        </li>
+        <li class="gnav__item">
+          <a href="#contact" class="gnav__link">contact</a>
         </li>
       </ul>
     </nav>
+    <button id="hamburger" class="hamburger">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
     <main class="main-contents">
       <section class="section page">
         <div class="container _narrow">
