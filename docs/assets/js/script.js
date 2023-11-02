@@ -1,42 +1,36 @@
 $(function () {
-  $(window).on("scroll", function () {
-    let elem = $(".fadeIn");
-    const isAnimate = "isAnimate";
-    elem.each(function () {
-      const elemOffset = $(this).offset().top;
-      const scrollPos = $(window).scrollTop();
-      const wh = $(window).height();
-      if (scrollPos > elemOffset - wh + wh / 3) {
-        $(this).addClass(isAnimate);
-      }
-    });
-  });
-  $(window).on("scroll", function () {
-    let el = $(".features__item");
-    const isFadeup = "isFadeup";
-    el.each(function () {
-      const elOffset = $(this).offset().top;
-      const scrollPos = $(window).scrollTop();
-      const wh = $(window).height();
-      if (scrollPos > elOffset - wh + wh / 3) {
-        $(this).addClass(isFadeup);
-      }
+  $(document).ready(function () {
+    const wh = $(window).height();
+    function checkAndAnimate(selector, animationClass, offsetMultiplier) {
+      $(selector).each(function () {
+        const elem = $(this);
+        const elemOffset = elem.offset().top;
+        const scrollPos = $(window).scrollTop();
+        if (scrollPos > elemOffset - wh + wh * offsetMultiplier) {
+          elem.addClass(animationClass);
+        }
+      });
+    }
+    // ページ読み込み時とスクロール時に要素をチェック
+    checkAndAnimate(".fadeIn", "isAnimate", 0.25);
+    checkAndAnimate(".features__item, .flow-title, tbody", "isFadeup", 0.33);
+    $(window).on("scroll", function () {
+      checkAndAnimate(".fadeIn", "isAnimate", 0.25);
+      checkAndAnimate(".features__item, .flow-title, tbody", "isFadeup", 0.33);
     });
   });
 
-  const $trigger = $("#hamburger");
-  $trigger.on("click", function () {
-    if ($("#hamburger").hasClass("open")) {
-      $("#hamburger").removeClass("open");
-      $("#gnav").removeClass("open");
-    } else {
-      $("#hamburger").addClass("open");
-      $("#gnav").addClass("open");
-    }
+  const $hamburger = $("#hamburger");
+  const $gnav = $("#gnav");
+
+  $hamburger.on("click", function () {
+    $hamburger.toggleClass("open");
+    $gnav.toggleClass("open");
   });
-  document.getElementById("gnav").addEventListener("click", function () {
-    $("#hamburger").removeClass("open");
-    $("#gnav").removeClass("open");
+
+  $gnav.on("click", function () {
+    $hamburger.removeClass("open");
+    $gnav.removeClass("open");
   });
   //簡易バリデーション
   //--------------------------------------------
