@@ -20,6 +20,26 @@ $(function () {
     });
   });
 
+
+  $(document).ready(function() {
+    const alternateThumbs = $('.alternate__thumb');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          $(entry.target).addClass('floating');
+        } else {
+          $(entry.target).removeClass('floating');
+        }
+      });
+    }, { threshold: 0.25 });
+
+    alternateThumbs.each(function(index, element) {
+      observer.observe(element);
+    });
+  });
+
+
   const $hamburger = $("#hamburger");
   const $gnav = $("#gnav");
 
