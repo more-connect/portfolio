@@ -1,42 +1,29 @@
-$(function () {
-  $(document).ready(function () {
-    const wh = $(window).height();
-    function checkAndAnimate(selector, animationClass, offsetMultiplier) {
-      $(selector).each(function () {
-        const elem = $(this);
-        const elemOffset = elem.offset().top;
-        const scrollPos = $(window).scrollTop();
-        if (scrollPos > elemOffset - wh + wh * offsetMultiplier) {
-          elem.addClass(animationClass);
-        }
-      });
-    }
-    // ページ読み込み時とスクロール時に要素をチェック
+$(document).ready(function () {
+  const wh = $(window).height();
+
+  function checkAndAnimate(selector, animationClass, offsetMultiplier) {
+    $(selector).each(function () {
+      const elem = $(this);
+      const elemOffset = elem.offset().top;
+      const scrollPos = $(window).scrollTop();
+      if (scrollPos > elemOffset - wh + wh * offsetMultiplier) {
+        elem.addClass(animationClass);
+      }
+    });
+  }
+
+  // ページ読み込み時とスクロール時に要素をチェック
+  function checkAllElements() {
     checkAndAnimate(".fadeIn", "isAnimate", 0.25);
-    checkAndAnimate(".features__item, .flow-title, tbody", "isFadeup", 0.33);
-    $(window).on("scroll", function () {
-      checkAndAnimate(".fadeIn", "isAnimate", 0.25);
-      checkAndAnimate(".features__item, .flow-title, tbody", "isFadeup", 0.33);
-    });
-  });
+    checkAndAnimate(".flow-title, tbody", "isFadeup", 0.33);
+  }
 
+  // 初回チェック
+  checkAllElements();
 
-  $(document).ready(function() {
-    const alternateThumbs = $('.alternate__thumb');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          $(entry.target).addClass('floating');
-        } else {
-          $(entry.target).removeClass('floating');
-        }
-      });
-    }, { threshold: 0.25 });
-
-    alternateThumbs.each(function(index, element) {
-      observer.observe(element);
-    });
+  // スクロール時に要素をチェック
+  $(window).on("scroll", function () {
+    checkAllElements();
   });
 
 
@@ -52,45 +39,23 @@ $(function () {
     $hamburger.removeClass("open");
     $gnav.removeClass("open");
   });
-  //簡易バリデーション
-  //--------------------------------------------
-  $("input,textarea,select").each(function () {
-    $(this).on("change", function () {
-      if ($(this).is(":invalid")) {
-        $(this).parents(".input-field").addClass("is-error");
-        //そのフォームのエラーメッセージをスクリーンリーダー向けに表示
-        $(this)
-          .parents(".input-field")
-          .find(".error-text")
-          .attr("aria-hidden", false);
-      } else {
-        $(this).parents(".input-field").removeClass("is-error");
-        //エラーメッセージをスクリーンリーダーから隠す
-        $(this)
-          .parents(".input-field")
-          .find(".error-text")
-          .attr("aria-hidden", true);
-      }
-    });
+
+  // 簡易バリデーション
+  $("input, textarea, select").on("change", function () {
+    const $parentField = $(this).parents(".input-field");
+    const $errorText = $parentField.find(".error-text");
+
+    if ($(this).is(":invalid")) {
+      $parentField.addClass("is-error");
+      $errorText.attr("aria-hidden", false);
+    } else {
+      $parentField.removeClass("is-error");
+      $errorText.attr("aria-hidden", true);
+    }
   });
 
+  // 送信ボタンクリック時のバリデーション
   $("#submit").on("click", function () {
-    $("input,textarea,select").each(function () {
-      if ($(this).is(":invalid")) {
-        $(this).parents(".input-field").addClass("is-error");
-        //そのフォームのエラーメッセージをスクリーンリーダー向けに表示
-        $(this)
-          .parents(".input-field")
-          .find(".error-text")
-          .attr("aria-hidden", false);
-      } else {
-        $(this).parents(".input-field").removeClass("is-error");
-        //エラーメッセージをスクリーンリーダーから隠す
-        $(this)
-          .parents(".input-field")
-          .find(".error-text")
-          .attr("aria-hidden", true);
-      }
-    });
+    $("input, textarea, select").trigger("change");
   });
 });

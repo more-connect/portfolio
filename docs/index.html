@@ -6,10 +6,7 @@
     <meta name="format-detection" content="telephone=no" />
     <title>大村と申します</title>
     <meta name="description" content="コーディングならお任せください！" />
-    <link
-      href="https://more-connect.github.io/portfolio/assets/css/style.css"
-      rel="stylesheet"
-    />
+    <link href="https://more-connect.github.io/portfolio/assets/css/style.css" rel="stylesheet" />
     <link
       rel="icon"
       href="https://more-connect.github.io/portfolio/assets/favicon.ico"
@@ -30,10 +27,7 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://more-connect.github.io/portfolio/assets/js/script.js"
-      defer
-    ></script>
+    <script src="https://more-connect.github.io/portfolio/assets/js/script.js" defer></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -48,22 +42,39 @@
 
       gtag("config", "G-0BQVM7FECL");
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="https://more-connect.github.io/portfolio/assets/js/animation.js" defer></script>
   </head>
 
   <body>
+    <div class="loader-bg js-loader-bg">
+      <div class="loader">
+        <div><span></span></div>
+        <div><span></span></div>
+        <div><span></span></div>
+        <div><span></span></div>
+        <p>LOADING...</p>
+      </div>
+    </div>
     <header class="header" id="top">
-      <h1 class="header__txt">Welcome to <br>My Portfolio!</h1>
+      <h1 class="header__txt js-typing">
+        Welcome to
+        My Portfolio!
+      </h1>
       <div class="scrolldown"><span>Scroll</span></div>
       <div class="header__img__wrap">
-        <div class="box-1">
-        </div>
-        <div class="box-2">
-        </div>
+        <div class="box-1"></div>
+        <div class="box-2"></div>
         <div class="box-3">
-          <img src="https://more-connect.github.io/portfolio/assets/img/header_img1.png"/>
+          <img
+            src="https://more-connect.github.io/portfolio/assets/img/header_img1.png"
+          />
         </div>
         <div class="box-4">
-          <img src="https://more-connect.github.io/portfolio/assets/img/header_img2.png"/>
+          <img
+            src="https://more-connect.github.io/portfolio/assets/img/header_img2.png"
+          />
         </div>
       </div>
     </header>
@@ -232,7 +243,7 @@
                   </p>
                 </div>
               </div>
-              <figure class="alternate__thumb">
+              <figure class="alternate__thumb js-parallax">
                 <img
                   src="https://more-connect.github.io/portfolio/assets/img/skil.jpeg"
                   alt="コーディングのイメージ写真"
@@ -256,9 +267,7 @@
                   </p>
                 </div>
               </div>
-              <figure
-                class="alternate__thumb"
-              >
+              <figure class="alternate__thumb js-parallax">
                 <img
                   src="https://more-connect.github.io/portfolio/assets/img/notepc.jpg"
                   alt="CMSのイメージ写真"
@@ -281,7 +290,7 @@
                   </p>
                 </div>
               </div>
-              <figure class="alternate__thumb">
+              <figure class="alternate__thumb js-parallax">
                 <img
                   src="https://more-connect.github.io/portfolio/assets/img/WordPress.jpg"
                   alt="ワードプレスのイメージ写真"
@@ -295,47 +304,49 @@
           </div>
         </section>
 
-        <section class="section section--bg">
+        <section class="section js-scroll">
           <h2 class="section-title" id="features">
             <span class="section-title__main">特徴</span>
             <span class="section-title__sub_reverse fadeIn">features</span>
           </h2>
-          <div class="features__list">
-            <div class="features__item">
-              <h3 class="features-title">
-                <span class="features-title__main">即納</span>
-                <span class="features-title__sub">
-                  <span class="point">POINT</span><br />
-                  <span class="num">01</span>
-                </span>
-              </h3>
-              <p class="features__text">
-                お互いに安心してお仕事のやり取りをしていくために、迅速・丁寧なコーディングで、早めの納品をします。
-              </p>
-            </div>
-            <div class="features__item delay2">
-              <h3 class="features-title">
-                <span class="features-title__main">忠実</span>
-                <span class="features-title__sub">
-                  <span class="point">POINT</span><br />
-                  <span class="num">02</span>
-                </span>
-              </h3>
-              <p class="features__text">
-                デザインの自由度が低いWordPressも、お客様のイメージ通りにお作りできます。
-              </p>
-            </div>
-            <div class="features__item delay4">
-              <h3 class="features-title">
-                <span class="features-title__main">アフターフォロー</span>
-                <span class="features-title__sub">
-                  <span class="point">POINT</span><br />
-                  <span class="num">03</span>
-                </span>
-              </h3>
-              <p class="features__text">
-                公開後も、デザインの調整や機能の追加、他お困りごとがございましたらフォローいたします。
-              </p>
+          <div class="features__list js-scroll_container">
+            <div class="js-scroll_inner">
+              <div class="features__item js-scroll_box">
+                <h3 class="features-title">
+                  <span class="features-title__main">即納</span>
+                  <span class="features-title__sub">
+                    <span class="point">POINT</span><br />
+                    <span class="num">01</span>
+                  </span>
+                </h3>
+                <p class="features__text">
+                  お互いに安心してお仕事のやり取りをしていくために、迅速・丁寧なコーディングで、早めの納品をします。
+                </p>
+              </div>
+              <div class="features__item js-scroll_box">
+                <h3 class="features-title">
+                  <span class="features-title__main">忠実</span>
+                  <span class="features-title__sub">
+                    <span class="point">POINT</span><br />
+                    <span class="num">02</span>
+                  </span>
+                </h3>
+                <p class="features__text">
+                  デザインの自由度が低いWordPressも、お客様のイメージ通りにお作りできます。
+                </p>
+              </div>
+              <div class="features__item js-scroll_box">
+                <h3 class="features-title">
+                  <span class="features-title__main">アフター<br>フォロー</span>
+                  <span class="features-title__sub">
+                    <span class="point">POINT</span><br />
+                    <span class="num">03</span>
+                  </span>
+                </h3>
+                <p class="features__text">
+                  公開後も、デザインの調整や機能の追加、他お困りごとがございましたらフォローいたします。
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -374,10 +385,15 @@
                 </p>
                 <a
                   href="/portfolio/works/flower/"
-                  class="btn btn--next"
+                  class="btn"
                   target="_blank"
-                  >webサイトへ</a
+                  id="hover_trigger"
                 >
+                  <div class="btn__inner">
+                    <span class="hover_txt">view</span>
+                    <span class="hover_txt">click here!</span>
+                  </div>
+                </a>
               </div>
             </li>
             <li class="works__item _reverse">
@@ -409,10 +425,15 @@
                 </p>
                 <a
                   href="/portfolio/works/house/"
-                  class="btn btn--next"
+                  class="btn"
                   target="_blank"
-                  >webサイトへ</a
+                  id="hover_trigger"
                 >
+                  <div class="btn__inner">
+                    <span class="hover_txt">view</span>
+                    <span class="hover_txt">click here!</span>
+                  </div>
+                </a>
               </div>
             </li>
           </ul>
@@ -567,13 +588,17 @@
           <p class="section__lead">あなたはこんな悩みをお持ちでないですか？</p>
           <ul class="contact__list">
             <li class="contact__item triangle-bottom">
-              初めてのホームページ作成、<br />何からすればいいの？
+              <p class="js-line">
+                初めてのホームページ作成、<br />何からすればいいの？
+              </p>
             </li>
             <li class="contact__item triangle-bottom">
-              Webサイトの運用を楽にしていきたい
+              <p class="js-line">Webサイトの運用を楽にしていきたい</p>
             </li>
             <li class="contact__item triangle-bottom">
-              以前作ったサイトが<br />スマホに対応していない
+              <p class="js-line">
+                以前作ったサイトが<br />スマホに対応していない
+              </p>
             </li>
           </ul>
           <div class="contact__img">
@@ -587,12 +612,16 @@
             />
           </div>
           <ul class="contact__list">
-            <li class="contact__item triangle-top">機能の拡張をしていきたい</li>
             <li class="contact__item triangle-top">
-              お問い合わせフォームを作りたい
+              <p class="js-line">機能の拡張をしていきたい</p>
             </li>
             <li class="contact__item triangle-top">
-              すでにあるホームページを<br />リニューアルしたい
+              <p class="js-line">お問い合わせフォームを作りたい</p>
+            </li>
+            <li class="contact__item triangle-top">
+              <p class="js-line">
+                すでにあるホームページを<br />リニューアルしたい
+              </p>
             </li>
           </ul>
           <p class="section__lead diagonal">
@@ -609,7 +638,7 @@
     </main>
     <footer class="footer">
       <p class="footer__copyright">
-        <small lang="en">&copy; omrPortfolio 2022</small>
+        <small lang="en">&copy; omrPortfolio 2023</small>
       </p>
     </footer>
   </body>
