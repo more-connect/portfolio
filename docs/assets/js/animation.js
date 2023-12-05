@@ -136,21 +136,22 @@ ScrollTrigger.create({
   onEnter: () => tl.play(),
 });
 
-
-const inner = document.querySelector(".js-scroll_inner");
-
+const inner = document.querySelector(".js-scroll");
 if (inner) {
   const slides = gsap.utils.toArray(".js-scroll_box");
-  const innerWidth = inner.offsetWidth;
+  const slideWidth = slides[0].offsetWidth;
+  const totalSlides = slides.length;
+  const innerWidth = slideWidth * totalSlides;
+  console.log(innerWidth);
 
   gsap.to(slides, {
     xPercent: -100 * (slides.length - 1),
     ease: "none",
     scrollTrigger: {
-      trigger: '.js-scroll',
+      trigger: ".js-scroll",
       pin: true,
       scrub: true,
-      end: `+=${innerWidth - 1}`,
+      end: () => `+=${innerWidth}`,
     },
   });
 }
