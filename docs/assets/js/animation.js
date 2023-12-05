@@ -103,13 +103,13 @@ targets.forEach((target) => {
       y: 0,
     },
     {
-      y: -50, // y方向-に60px移動させる
-      ease: "none", // イージングなし
+      y: -50,
+      ease: "none",
       scrollTrigger: {
-        trigger: target, // ScrollTriggerの開始位置を計算するために使用される要素
-        start: "top bottom", // trigger要素の開始位置と画面の開始位置
-        end: "bottom top", // trigger要素の終了位置と画面の終了位置
-        scrub: 0.5, // アニメーションのスクラブ効果（オフセットに基づいてアニメーションの進捗を制御）
+        trigger: target,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 0.5,
       },
     }
   );
@@ -142,7 +142,6 @@ const inner = document.querySelector(".js-scroll_inner");
 if (inner) {
   const slides = gsap.utils.toArray(".js-scroll_box");
   const innerWidth = inner.offsetWidth;
-  const extraOffset = 500; // 追加するオフセット
 
   gsap.to(slides, {
     xPercent: -100 * (slides.length - 1),
@@ -150,7 +149,7 @@ if (inner) {
     scrollTrigger: {
       trigger: '.js-scroll',
       pin: true,
-      scrub: true, // スクロール量に合わせてアニメーション
+      scrub: true,
       end: `+=${innerWidth - 1}`,
     },
   });
