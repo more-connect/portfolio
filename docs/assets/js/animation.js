@@ -136,22 +136,36 @@ ScrollTrigger.create({
   onEnter: () => tl.play(),
 });
 
+
 const inner = document.querySelector(".js-scroll");
+
 if (inner) {
   const slides = gsap.utils.toArray(".js-scroll_box");
   const slideWidth = slides[0].offsetWidth;
   const totalSlides = slides.length;
   const innerWidth = slideWidth * totalSlides;
-  console.log(innerWidth);
-
-  gsap.to(slides, {
-    xPercent: -100 * (slides.length - 1),
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".js-scroll",
-      pin: true,
-      scrub: true,
-      end: () => `+=${innerWidth}`,
-    },
-  });
+  // Check if the window width is 767px or less
+  if (window.innerWidth <= 767) {
+    gsap.to(slides, {
+      xPercent: -100 * (slides.length - .5),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".js-scroll",
+        pin: true,
+        scrub: true,
+        end: () => `+=${innerWidth}`,
+      },
+    });
+  } else {
+    gsap.to(slides, {
+      xPercent: -100 * (slides.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".js-scroll",
+        pin: true,
+        scrub: true,
+        end: () => `+=${innerWidth}`,
+      },
+    });
+  }
 }
