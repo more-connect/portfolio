@@ -147,7 +147,7 @@ if (inner) {
   // Check if the window width is 767px or less
   if (window.innerWidth <= 767) {
     gsap.to(slides, {
-      xPercent: -100 * (slides.length - .5),
+      xPercent: -100 * (slides.length - .4),
       ease: "none",
       scrollTrigger: {
         trigger: ".js-scroll",
@@ -158,7 +158,7 @@ if (inner) {
     });
   } else {
     gsap.to(slides, {
-      xPercent: -100 * (slides.length - 1),
+      xPercent: -100 * (slides.length - .5),
       ease: "none",
       scrollTrigger: {
         trigger: ".js-scroll",
