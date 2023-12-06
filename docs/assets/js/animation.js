@@ -118,7 +118,6 @@ targets.forEach((target) => {
 const tl = gsap.timeline({ paused: true });
 const lines = document.querySelectorAll(".js-line");
 const shuffledLines = Array.from(lines).sort(() => Math.random() - 0.5);
-
 tl.staggerFrom(
   shuffledLines,
   1.2,
@@ -129,7 +128,6 @@ tl.staggerFrom(
   },
   0.4
 );
-
 ScrollTrigger.create({
   trigger: ".contact__img",
   start: "top top",
@@ -138,7 +136,6 @@ ScrollTrigger.create({
 
 
 const inner = document.querySelector(".js-scroll");
-
 if (inner) {
   const slides = gsap.utils.toArray(".js-scroll_box");
   const slideWidth = slides[0].offsetWidth;
