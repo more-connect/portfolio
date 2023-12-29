@@ -48,11 +48,15 @@
 
       gtag("config", "G-0BQVM7FECL");
     </script>
+    <script type="text/javascript">
+      let submitted = false;
+    </script>
     <iframe
-    name="hidden_iframe"
-    style="display: none"
-    onload="if(submitted){window.location='thanks.html';}"
-  ></iframe>
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none"
+      onload="if(submitted){window.location='thanks.html';}"
+    ></iframe>
   </head>
   <body>
     <nav class="c-gnav js-gnav" aria-label="メインメニュー">
@@ -107,7 +111,9 @@
             <div class="p-contact-form">
               <label class="p-contact-form__input-label"
                 >お名前(会社名)
-                <span class="p-contact-form__require" aria-hidden="true">必須</span>
+                <span class="p-contact-form__require" aria-hidden="true"
+                  >必須</span
+                >
               </label>
               <div class="p-contact-form__input-field">
                 <input type="text" name="entry.1323083721" required />
@@ -120,7 +126,9 @@
             <div class="p-contact-form">
               <label class="p-contact-form__input-label"
                 >お問い合わせ内容
-                <span class="p-contact-form__require" aria-hidden="true">必須</span>
+                <span class="p-contact-form__require" aria-hidden="true"
+                  >必須</span
+                >
               </label>
               <div class="p-contact-form__input-field">
                 <div class="p-contact-form__select-wrap">
@@ -142,7 +150,9 @@
             <div class="p-contact-form">
               <label class="p-contact-form__input-label"
                 >メールアドレス
-                <span class="p-contact-form__require" aria-hidden="true">必須</span>
+                <span class="p-contact-form__require" aria-hidden="true"
+                  >必須</span
+                >
               </label>
               <div class="p-contact-form__input-field">
                 <input type="email" name="entry.698011933" required />
@@ -150,7 +160,9 @@
             </div>
 
             <div class="p-contact-form">
-              <label class="p-contact-form__input-label">お問い合わせ詳細 </label>
+              <label class="p-contact-form__input-label"
+                >お問い合わせ詳細
+              </label>
               <div class="p-contact-form__input-field">
                 <textarea
                   name="entry.595468395"
