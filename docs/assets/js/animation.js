@@ -129,7 +129,7 @@ tl.staggerFrom(
   0.4
 );
 ScrollTrigger.create({
-  trigger: ".contact__img",
+  trigger: ".p-contact__img",
   start: "top top",
   onEnter: () => tl.play(),
 });
