@@ -14,8 +14,8 @@ $(document).ready(function () {
 
   // ページ読み込み時とスクロール時に要素をチェック
   function checkAllElements() {
-    checkAndAnimate(".fadeIn", "isAnimate", 0.25);
-    checkAndAnimate(".flow-title, tbody", "isFadeup", 0.33);
+    checkAndAnimate(".l-section__heading-sub, .l-section__heading-sub--reverse", "is-animate", 0.25);
+    checkAndAnimate(".p-flow__title, .p-price__tbody", "is-fadeIn", 0.33);
   }
 
   // 初回チェック
@@ -27,17 +27,16 @@ $(document).ready(function () {
   });
 
 
-  const $hamburger = $("#hamburger");
-  const $gnav = $("#gnav");
-
+  const $hamburger = $(".js-hamburger");
+  const $gnav = $(".js-gnav");
   $hamburger.on("click", function () {
-    $hamburger.toggleClass("open");
-    $gnav.toggleClass("open");
+    $hamburger.toggleClass("is-open");
+    $gnav.toggleClass("is-open");
   });
 
   $gnav.on("click", function () {
-    $hamburger.removeClass("open");
-    $gnav.removeClass("open");
+    $hamburger.removeClass("is-open");
+    $gnav.removeClass("is-open");
   });
 
   // 簡易バリデーション

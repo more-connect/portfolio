@@ -51,73 +51,70 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
         <script src="https://more-connect.github.io/portfolio/assets/js/animation.js" defer></script>
   </head>
-
   <body>
-    <nav id="gnav" class="gnav" aria-label="メインメニュー">
-      <ul class="gnav__list">
-        <li class="gnav__item">
-          <a href="../#about" class="gnav__link">about</a>
-        </li>
-        <li class="gnav__item">
-          <a href="../#service" class="gnav__link">service</a>
-        </li>
-        <li class="gnav__item">
-          <a href="../#features" class="gnav__link">features</a>
-        </li>
-        <li class="gnav__item">
-          <a href="../#works" class="gnav__link">works</a>
-        </li>
-        <li class="gnav__item">
-          <a href="../#flow" class="gnav__link">flow</a>
-        </li>
-        <li class="gnav__item">
-          <a href="../#price" class="gnav__link">price</a>
-        </li>
-        <li class="gnav__item">
-          <a href="../#contact" class="gnav__link">contact</a>
-        </li>
-      </ul>
-    </nav>
-    <button id="hamburger" class="hamburger">
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-    </button>
-    <main class="main-contents">
-      <section class="section page">
-        <div class="container _narrow">
-          <h1 class="section-title">
-            <span class="section-title__main">送信完了</span>
-          </h1>
+    <div class="p-thanks__wrap">
+      <nav class="c-gnav js-gnav" aria-label="メインメニュー">
+        <ul class="c-gnav__list">
+          <li class="c-gnav__item">
+            <a href="#about" class="c-gnav__link">about</a>
+          </li>
+          <li class="c-gnav__item">
+            <a href="#service" class="c-gnav__link">service</a>
+          </li>
+          <li class="c-gnav__item">
+            <a href="#features" class="c-gnav__link">features</a>
+          </li>
+          <li class="c-gnav__item">
+            <a href="#works" class="c-gnav__link">works</a>
+          </li>
+          <li class="c-gnav__item">
+            <a href="#flow" class="c-gnav__link">flow</a>
+          </li>
+          <li class="c-gnav__item">
+            <a href="#price" class="c-gnav__link">price</a>
+          </li>
+          <li class="c-gnav__item">
+            <a href="#contact" class="c-gnav__link">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="c-hamburger js-hamburger">
+        <span class="c-hamburger__line"></span>
+        <span class="c-hamburger__line"></span>
+        <span class="c-hamburger__line"></span>
+      </button>
+      <main class="l-main p-thanks__inner">
+        <div class="l-main__inner">
+          <section class="l-section">
+            <h2 class="l-section__heading">
+              <span class="l-section__heading-main">送信完了</span>
+            </h2>
 
-          <div class="message">
-            <p class="message__title">お問い合わせありがとうございました。</p>
-            <div class="message__text">
+            <div class="p-thanks__message">
+              <p>お問い合わせありがとうございました。</p>
               <p>
                 お問い合わせ内容を確認させていただき、近日中に返信させていただきます。<br />
-                数日経っても返信が無い場合は、<br />大変お手数ですが改めてご連絡いただけますよう、お願い申し上げます。
+                数日経っても返信が無い場合は、大変お手数ですが改めてご連絡いただけますよう、お願い申し上げます。
               </p>
             </div>
-          </div>
-          <a
-            href="../"
-            class="btn btn-center"
-            id="hover_trigger"
-          >
-            <div class="btn__inner">
-              <span class="hover_txt">TOP</span>
-              <span class="hover_txt">THANK YOU!!</span>
-            </div>
-          </a>
-
+            <a
+              href="../"
+              class="c-button js-hoverTrigger p-thanks__button-center"
+            >
+              <div class="c-button__text p-thanks__button-upper">
+                <span class="js-hovertext">top</span>
+                <span class="js-hovertext">thank you!!</span>
+              </div>
+            </a>
+          </section>
         </div>
-      </section>
-    </main>
+      </main>
 
-    <footer class="footer">
-      <p class="footer__copyright">
-        <small lang="en">&copy; omrPortfolio 2023</small>
-      </p>
-    </footer>
+      <footer class="l-footer l-footer__bg">
+        <p class="l-footer__copyright">
+          <small lang="en">&copy; omrPortfolio 2023</small>
+        </p>
+      </footer>
+    </div>
   </body>
 </html>

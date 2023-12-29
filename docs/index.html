@@ -52,10 +52,9 @@
       defer
     ></script>
   </head>
-
   <body>
-    <div class="loader-bg js-loader-bg">
-      <div class="loader">
+    <div class="c-loader__bg js-loader-bg">
+      <div class="c-loader">
         <div><span></span></div>
         <div><span></span></div>
         <div><span></span></div>
@@ -63,79 +62,80 @@
         <p>LOADING...</p>
       </div>
     </div>
-    <header class="header" id="top">
-      <h1 class="header__txt js-typing">Welcome to My Portfolio!</h1>
-      <div class="scrolldown"><span>Scroll</span></div>
+    <header class="l-header" id="top">
+      <h1 class="l-header__text js-typing">Welcome to My Portfolio!</h1>
+      <div class="l-header__scrolldown"><span>Scroll</span></div>
     </header>
 
-    <nav id="gnav" class="gnav" aria-label="メインメニュー">
-      <ul class="gnav__list">
-        <li class="gnav__item">
-          <a href="#about" class="gnav__link">about</a>
+    <nav class="c-gnav js-gnav" aria-label="メインメニュー">
+      <ul class="c-gnav__list">
+        <li class="c-gnav__item">
+          <a href="#about" class="c-gnav__link">about</a>
         </li>
-        <li class="gnav__item">
-          <a href="#service" class="gnav__link">service</a>
+        <li class="c-gnav__item">
+          <a href="#service" class="c-gnav__link">service</a>
         </li>
-        <li class="gnav__item">
-          <a href="#features" class="gnav__link">features</a>
+        <li class="c-gnav__item">
+          <a href="#features" class="c-gnav__link">features</a>
         </li>
-        <li class="gnav__item">
-          <a href="#works" class="gnav__link">works</a>
+        <li class="c-gnav__item">
+          <a href="#works" class="c-gnav__link">works</a>
         </li>
-        <li class="gnav__item">
-          <a href="#flow" class="gnav__link">flow</a>
+        <li class="c-gnav__item">
+          <a href="#flow" class="c-gnav__link">flow</a>
         </li>
-        <li class="gnav__item">
-          <a href="#price" class="gnav__link">price</a>
+        <li class="c-gnav__item">
+          <a href="#price" class="c-gnav__link">price</a>
         </li>
-        <li class="gnav__item">
-          <a href="#contact" class="gnav__link">contact</a>
+        <li class="c-gnav__item">
+          <a href="#contact" class="c-gnav__link">contact</a>
         </li>
       </ul>
     </nav>
-    <button id="hamburger" class="hamburger">
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
-      <span class="hamburger__line"></span>
+    <button class="c-hamburger js-hamburger">
+      <span class="c-hamburger__line"></span>
+      <span class="c-hamburger__line"></span>
+      <span class="c-hamburger__line"></span>
     </button>
 
-    <main class="main-contents">
-      <div class="container _narrow">
-        <section class="section">
-          <h2 class="section-title" id="about">
-            <span class="section-title__main">私について</span>
-            <span class="section-title__sub fadeIn">About me</span>
+    <main class="l-main">
+      <div class="l-main__inner">
+        <section class="l-section">
+          <h2 class="l-section__heading" id="about">
+            <span class="l-section__heading-main">私について</span>
+            <span class="l-section__heading-sub">About me</span>
           </h2>
-          <div class="profile">
-            <p class="profile__txt">
-              初めまして、<span class="profiele__name">大村</span>と申します。
+          <div class="p-profile">
+            <p class="p-profile__text">
+              初めまして、<span class="p-profile__name">大村</span>と申します。
             </p>
-            <p class="profile__txt">福岡出身、福岡在住。</p>
-            <p class="profile__txt">
+            <p class="p-profile__text">福岡出身、福岡在住。</p>
+            <p class="p-profile__text">
               福岡の大自然に囲まれながら、<br />コーディングメインでお仕事を行ってます。
             </p>
-            <p class="profile__txt">
+            <p class="p-profile__text">
               Webサイトの開設は敷居が高いイメージがあるかもしれませんが、<br />
               そんなWebサイトがお客様にとって身近な存在となるように<br />ご提案・サポートをさせていただきたいと思います。
             </p>
-            <p class="profile__txt">
+            <p class="p-profile__text">
               ご依頼いただいたお客様に寄り添い、<br />お客様の想いを届けるお手伝いをさせていただきます。
             </p>
           </div>
         </section>
-        <section class="section section--bg">
-          <h2 class="section-title" id="about">
-            <span class="section-title__main">スキル</span>
-            <span class="section-title__sub_reverse fadeIn">skill</span>
+
+        <section class="l-section l-section--bg">
+          <h2 class="l-section__heading" id="about">
+            <span class="l-section__heading-main">スキル</span>
+            <span class="l-section__heading-sub--reverse">skill</span>
           </h2>
-          <div class="skill">
-            <div class="skill-list">
-              <div class="skill__item">
-                <div class="skill__icon">
+          <div class="p-skill">
+            <div class="p-skill__list">
+              <div class="p-skill__item">
+                <div class="p-skill__icon">
                   <img
                     src="https://more-connect.github.io/portfolio/assets/img/html5-brands.svg"
                     aria-hidden="true"
-                    class="skill__icon-img"
+                    class="p-skill__icon-img"
                     width="50"
                     height="50"
                     loading="lazy"
@@ -143,14 +143,14 @@
                     alt="html"
                   />
                 </div>
-                <p class="skill__title">HTML</p>
+                <p class="p-skill__title">HTML</p>
               </div>
-              <div class="skill__item">
-                <div class="skill__icon">
+              <div class="p-skill__item">
+                <div class="p-skill__icon">
                   <img
                     src="https://more-connect.github.io/portfolio/assets/img/css3-alt-brands.svg"
                     aria-hidden="true"
-                    class="skill__icon-img"
+                    class="p-skill__icon-img"
                     width="50"
                     height="50"
                     loading="lazy"
@@ -158,14 +158,14 @@
                     alt="css"
                   />
                 </div>
-                <p class="skill__title">CSS</p>
+                <p class="p-skill__title">CSS</p>
               </div>
-              <div class="skill__item">
-                <div class="skill__icon">
+              <div class="p-skill__item">
+                <div class="p-skill__icon">
                   <img
                     src="https://more-connect.github.io/portfolio/assets/img/sass-brands.svg"
                     aria-hidden="true"
-                    class="skill__icon-img"
+                    class="p-skill__icon-img"
                     width="50"
                     height="50"
                     loading="lazy"
@@ -173,14 +173,14 @@
                     alt="sass"
                   />
                 </div>
-                <p class="skill__title">Sass</p>
+                <p class="p-skill__title">Sass</p>
               </div>
-              <div class="skill__item">
-                <div class="skill__icon">
+              <div class="p-skill__item">
+                <div class="p-skill__icon">
                   <img
                     src="https://more-connect.github.io/portfolio/assets/img/js-square-brands.svg"
                     aria-hidden="true"
-                    class="skill__icon-img"
+                    class="p-skill__icon-img"
                     width="50"
                     height="50"
                     loading="lazy"
@@ -188,14 +188,14 @@
                     alt="javascript"
                   />
                 </div>
-                <p class="skill__title">JavaScript</p>
+                <p class="p-skill__title">JavaScript</p>
               </div>
-              <div class="skill__item">
-                <div class="skill__icon">
+              <div class="p-skill__item">
+                <div class="p-skill__icon">
                   <img
                     src="https://more-connect.github.io/portfolio/assets/img/wordpress-brands.svg"
                     aria-hidden="true"
-                    class="skill__icon-img"
+                    class="p-skill__icon-img"
                     width="50"
                     height="50"
                     loading="lazy"
@@ -203,41 +203,34 @@
                     alt="wordpress"
                   />
                 </div>
-                <p class="skill__title">WordPress</p>
+                <p class="p-skill__title">WordPress</p>
               </div>
             </div>
           </div>
         </section>
-        <section class="section">
-          <h2 class="section-title" id="service">
-            <span class="section-title__main">サービス内容</span>
-            <span class="section-title__sub fadeIn">service</span>
-            <p class="section__lead">
+        <section class="l-section">
+          <h2 class="l-section__heading" id="service">
+            <span class="l-section__heading-main">サービス内容</span>
+            <span class="l-section__heading-sub">service</span>
+            <p class="l-section__lead">
               コーポレートサイトから、個人経営のお店、<br />個人のホームページなど、<br />
               webサイト制作全般に対応します。<br />
             </p>
           </h2>
-          <div class="alternate-box">
-            <div class="alternate _normal">
-              <div class="alternate__body">
-                <i class="fa-solid fa-laptop-code icon"></i>
-                <h3 class="alternate__title">コーディング</h3>
-                <div class="alternate__txt">
-                  <p class="service-card__text">
-                    HTML/CSSを用いてWebサイトの構築を行います。<br />
-                    レスポンシブにも対応可能です。<br />
-                  </p>
-                  <p class="service-card__text">
-                    BEM記法を意識し、保守性・拡張性の高いコーディングを行い、<br />
-                    運用の負担を軽減いたします。
-                  </p>
-                  <p class="service-card__text">
-                    また、CSSアニメーションやJavaScriptを用いて<br />
-                    Webサイトに動きを付けることも可能です。
-                  </p>
-                </div>
+          <div class="p-service">
+            <div class="p-service__box p-service__box--normal">
+              <div class="p-service__body">
+                <i class="fa-solid fa-laptop-code p-service__icon"></i>
+                <h3 class="p-service__title">コーディング</h3>
+                <p class="p-service__text">
+                  BEM記法を意識し、保守性・拡張性の高いコーディングを行い、
+                  運用の負担を軽減いたします。<br />
+                  レスポンシブにも対応可能です。<br />
+                  また、CSSアニメーションやJavaScriptを用いて
+                  Webサイトに動きを付けることも可能です。
+                </p>
               </div>
-              <figure class="alternate__thumb js-parallax">
+              <figure class="p-service__thumb js-parallax">
                 <img
                   src="https://more-connect.github.io/portfolio/assets/img/skil.jpeg"
                   alt="コーディングのイメージ写真"
@@ -248,20 +241,17 @@
                 />
               </figure>
             </div>
-
-            <div class="alternate _reverse">
-              <div class="alternate__body">
-                <i class="fa-solid fa-gears icon"></i>
-                <h3 class="alternate__title">ホームページ修正</h3>
-                <div class="alternate__txt">
-                  <p class="service-card__text">
-                    文章・画像の変更、表示崩れの修正、情報の更新など<br />
-                    既存のホームページで変更を加えたいというお困りごとに対応させていただきます。<br />
-                    お問い合わせフォームの構築も行います。
-                  </p>
-                </div>
+            <div class="p-service__box p-service__box--reverse">
+              <div class="p-service__body">
+                <i class="fa-solid fa-gears p-service__icon--reverse"></i>
+                <h3 class="p-service__title">ホームページ修正</h3>
+                <p class="p-service__text">
+                  文章・画像の変更、表示崩れの修正、情報の更新など<br />
+                  既存のホームページで変更を加えたいというお困りごとに対応させていただきます。<br />
+                  お問い合わせフォームの構築も行います。
+                </p>
               </div>
-              <figure class="alternate__thumb js-parallax">
+              <figure class="p-service__thumb js-parallax">
                 <img
                   src="https://more-connect.github.io/portfolio/assets/img/notepc.jpg"
                   alt="CMSのイメージ写真"
@@ -272,19 +262,17 @@
                 />
               </figure>
             </div>
-            <div class="alternate _normal">
-              <div class="alternate__body">
-                <i class="fa-brands fa-wordpress-simple icon"></i>
-                <h3 class="alternate__title">WordPress</h3>
-                <div class="alternate__txt">
-                  <p class="service-card__text">
-                    WordPressを用いてWebサイトの構築を行います。<br />
-                    既存のホームページのWordPress化も可能です。<br />
-                    また、テーマのカスタマイズや、プラグインの追加なども行います。
-                  </p>
-                </div>
+            <div class="p-service__box p-service__box--normal">
+              <div class="p-service__body">
+                <i class="fa-brands fa-wordpress-simple p-service__icon"></i>
+                <h3 class="p-service__title">WordPress</h3>
+                <p class="p-service__text">
+                  WordPressを用いてWebサイトの構築を行います。<br />
+                  既存のホームページのWordPress化も可能です。<br />
+                  また、テーマのカスタマイズや、プラグインの追加なども行います。
+                </p>
               </div>
-              <figure class="alternate__thumb js-parallax">
+              <figure class="p-service__thumb js-parallax">
                 <img
                   src="https://more-connect.github.io/portfolio/assets/img/WordPress.jpg"
                   alt="ワードプレスのイメージ写真"
@@ -298,48 +286,48 @@
           </div>
         </section>
 
-        <section class="section js-scroll">
-          <h2 class="section-title" id="features">
-            <span class="section-title__main">特徴</span>
-            <span class="section-title__sub_reverse fadeIn">features</span>
+        <section class="l-section js-scroll">
+          <h2 class="l-section__heading" id="features">
+            <span class="l-section__heading-main">特徴</span>
+            <span class="l-section__heading-sub--reverse">features</span>
           </h2>
-          <div class="features__list js-scroll_container">
+          <div class="p-features__list js-scroll_container">
             <div class="js-scroll_inner">
-              <div class="features__item js-scroll_box">
-                <h3 class="features-title">
-                  <span class="features-title__main">即納</span>
-                  <span class="features-title__sub">
-                    <span class="point">POINT</span><br />
-                    <span class="num">01</span>
+              <div class="p-features__item js-scroll_box">
+                <h3 class="p-features__title">
+                  <span class="p-features__title--main">即納</span>
+                  <span class="p-features__title--sub">
+                    <span class="p-features__title--point">POINT</span><br />
+                    <span class="p-features__title--num">01</span>
                   </span>
                 </h3>
-                <p class="features__text">
+                <p class="p-features__text">
                   お互いに安心してお仕事のやり取りをしていくために、迅速・丁寧なコーディングで、早めの納品をします。
                 </p>
               </div>
-              <div class="features__item js-scroll_box">
-                <h3 class="features-title">
-                  <span class="features-title__main">忠実</span>
-                  <span class="features-title__sub">
-                    <span class="point">POINT</span><br />
-                    <span class="num">02</span>
+              <div class="p-features__item js-scroll_box">
+                <h3 class="p-features__title">
+                  <span class="p-features__title--main">忠実</span>
+                  <span class="p-features__title--sub">
+                    <span class="p-features__title--point">POINT</span><br />
+                    <span class="p-features__title--num">02</span>
                   </span>
                 </h3>
-                <p class="features__text">
+                <p class="p-features__text">
                   デザインの自由度が低いWordPressも、お客様のイメージ通りにお作りできます。
                 </p>
               </div>
-              <div class="features__item js-scroll_box">
-                <h3 class="features-title">
-                  <span class="features-title__main"
+              <div class="p-features__item js-scroll_box">
+                <h3 class="p-features__title">
+                  <span class="p-features__title--main"
                     >アフター<br />フォロー</span
                   >
-                  <span class="features-title__sub">
-                    <span class="point">POINT</span><br />
-                    <span class="num">03</span>
+                  <span class="p-features__title--sub">
+                    <span class="p-features__title--point">POINT</span><br />
+                    <span class="p-features__title--num">03</span>
                   </span>
                 </h3>
-                <p class="features__text">
+                <p class="p-features__text">
                   公開後も、デザインの調整や機能の追加、他お困りごとがございましたらフォローいたします。
                 </p>
               </div>
@@ -347,14 +335,14 @@
           </div>
         </section>
 
-        <section class="section">
-          <h2 class="section-title" id="works">
-            <span class="section-title__main">制作例</span>
-            <span class="section-title__sub fadeIn">works</span>
+        <section class="l-section">
+          <h2 class="l-section__heading" id="works">
+            <span class="l-section__heading-main">制作例</span>
+            <span class="l-section__heading-sub">works</span>
           </h2>
-          <ul class="works__list">
-            <li class="works__item">
-              <div class="works__img">
+          <ul class="p-works__list">
+            <li class="p-works__item">
+              <div class="p-works__img">
                 <img
                   src="https://more-connect.github.io/portfolio/assets/img/portfolio.png"
                   alt="制作例の画像"
@@ -364,21 +352,21 @@
                   height="180"
                 />
               </div>
-              <div class="works__body">
-                <h3 class="works__title">ポートフォリオサイト</h3>
-                <p class="works__txt">
+              <div class="p-works__body">
+                <h3 class="p-works__title">ポートフォリオサイト</h3>
+                <p class="p-works__text">
                   html,css(sass),JavaScript,gsap,レスポンシブ<br />
                 </p>
-                <p class="works__txt">
+                <p class="p-works__text">
                   当サイトです。<br />
                   JavaScriptのGSAP（GreenSock Animation
-                  Platform）というライブラリを活用し、動きを演出しています。<br>
+                  Platform）というライブラリを活用し、動きを演出しています。<br />
                   コンタクトフォームは、Google Formsを使用しています。
                 </p>
               </div>
             </li>
-            <li class="works__item _reverse">
-              <div class="works__img">
+            <li class="p-works__item p-works__item--reverse">
+              <div class="p-works__img">
                 <img
                   src="https://more-connect.github.io/portfolio/assets/img/flower-shop.png"
                   alt="制作例の画像"
@@ -388,14 +376,14 @@
                   height="180"
                 />
               </div>
-              <div class="works__body">
-                <h3 class="works__title">フラワーショップ(サンプルサイト)</h3>
-                <p class="works__txt">
+              <div class="p-works__body">
+                <h3 class="p-works__title">フラワーショップ(サンプルサイト)</h3>
+                <p class="p-works__text">
                   制作期間：2日間<br />
                   html,css(sass),JavaScript,レスポンシブ<br />
                   トップページのみ
                 </p>
-                <p class="works__txt">
+                <p class="p-works__text">
                   akane様（<a
                     href="https://twitter.com/omsss22"
                     target="_blank"
@@ -405,18 +393,18 @@
                 </p>
                 <a
                   href="/portfolio/works/flower/"
-                  class="btn js-hoverTrigger"
+                  class="c-button js-hoverTrigger"
                   target="_blank"
                 >
-                  <div class="btn__inner">
-                    <span class="hover_txt">view</span>
-                    <span class="hover_txt">click here!</span>
+                  <div class="c-button__text">
+                    <span class="js-hovertext">view</span>
+                    <span class="js-hovertext">click here!</span>
                   </div>
                 </a>
               </div>
             </li>
-            <li class="works__item">
-              <div class="works__img">
+            <li class="p-works__item">
+              <div class="p-works__img">
                 <img
                   src="https://more-connect.github.io/portfolio/assets/img/akaruiHOUSE.png"
                   alt="制作例の画像"
@@ -426,14 +414,14 @@
                   height="180"
                 />
               </div>
-              <div class="works__body">
-                <h3 class="works__title">明るいHOUSE(サンプルサイト)</h3>
-                <p class="works__txt">
+              <div class="p-works__body">
+                <h3 class="p-works__title">明るいHOUSE(サンプルサイト)</h3>
+                <p class="p-works__text">
                   制作期間：2日間<br />
                   html,css(sass),JavaScript,レスポンシブ<br />
                   トップページのみ
                 </p>
-                <p class="works__txt">
+                <p class="p-works__text">
                   コーディング学習サイト
                   <a
                     href="https://code-jump.com/"
@@ -444,12 +432,12 @@
                 </p>
                 <a
                   href="/portfolio/works/house/"
-                  class="btn js-hoverTrigger"
+                  class="c-button js-hoverTrigger"
                   target="_blank"
                 >
-                  <div class="btn__inner">
-                    <span class="hover_txt">view</span>
-                    <span class="hover_txt">click here!</span>
+                  <div class="c-button__text">
+                    <span class="js-hovertext">view</span>
+                    <span class="js-hovertext">click here!</span>
                   </div>
                 </a>
               </div>
@@ -457,201 +445,201 @@
           </ul>
         </section>
 
-        <section class="section section--bg _diagonal">
-          <h2 class="section-title" id="flow">
-            <span class="section-title__main">制作の流れ</span>
-            <span class="section-title__sub_reverse fadeIn">flow</span>
+        <section class="l-section l-section--bg _diagonal">
+          <h2 class="l-section__heading" id="flow">
+            <span class="l-section__heading-main">制作の流れ</span>
+            <span class="l-section__heading-sub--reverse">flow</span>
           </h2>
-          <div class="flow">
-            <h3 class="flow-title">
-              <span class="flow-title__main">お問い合わせ、ご相談</span>
-              <span class="flow-title__sub">
-                <span class="point">STEP</span><br />
-                <span class="num">01</span>
+          <div class="p-flow">
+            <h3 class="p-flow__title">
+              <span class="p-flow__title--main">お問い合わせ、ご相談</span>
+              <span class="p-flow__title--sub">
+                <span class="p-flow__title--step">STEP</span><br />
+                <span class="p-flow__title--num">01</span>
               </span>
             </h3>
-            <h3 class="flow-title">
-              <span class="flow-title__main">お打ち合わせ（ヒアリング）</span>
-              <span class="flow-title__sub">
-                <span class="point">STEP</span><br />
-                <span class="num">02</span>
+            <h3 class="p-flow__title">
+              <span class="p-flow__title--main">お打ち合わせ（ヒアリング）</span>
+              <span class="p-flow__title--sub">
+                <span class="p-flow__title--step">STEP</span><br />
+                <span class="p-flow__title--num">02</span>
               </span>
             </h3>
-            <h3 class="flow-title">
-              <span class="flow-title__main"
+            <h3 class="p-flow__title">
+              <span class="p-flow__title--main"
                 >お見積り、スケジュール、ご確認</span
               >
-              <span class="flow-title__sub">
-                <span class="point">STEP</span><br />
-                <span class="num">03</span>
+              <span class="p-flow__title--sub">
+                <span class="p-flow__title--step">STEP</span><br />
+                <span class="p-flow__title--num">03</span>
               </span>
             </h3>
-            <h3 class="flow-title">
-              <span class="flow-title__main">コーディング</span>
-              <span class="flow-title__sub">
-                <span class="point">STEP</span><br />
-                <span class="num">04</span>
+            <h3 class="p-flow__title">
+              <span class="p-flow__title--main">コーディング</span>
+              <span class="p-flow__title--sub">
+                <span class="p-flow__title--step">STEP</span><br />
+                <span class="p-flow__title--num">04</span>
               </span>
             </h3>
-            <h3 class="flow-title">
-              <span class="flow-title__main">お客様確認・修正</span>
-              <span class="flow-title__sub">
-                <span class="point">STEP</span><br />
-                <span class="num">05</span>
+            <h3 class="p-flow__title">
+              <span class="p-flow__title--main">お客様確認・修正</span>
+              <span class="p-flow__title--sub">
+                <span class="p-flow__title--step">STEP</span><br />
+                <span class="p-flow__title--num">05</span>
               </span>
             </h3>
-            <h3 class="flow-title">
-              <span class="flow-title__main">納品</span>
-              <span class="flow-title__sub">
-                <span class="point">STEP</span><br />
-                <span class="num">06</span>
+            <h3 class="p-flow__title">
+              <span class="p-flow__title--main">納品</span>
+              <span class="p-flow__title--sub">
+                <span class="p-flow__title--step">STEP</span><br />
+                <span class="p-flow__title--num">06</span>
               </span>
             </h3>
           </div>
         </section>
 
-        <section class="section">
-          <h2 class="section-title" id="price">
-            <span class="section-title__main">料金</span>
-            <span class="section-title__sub fadeIn">price</span>
+        <section class="l-section">
+          <h2 class="l-section__heading" id="price">
+            <span class="l-section__heading-main">料金</span>
+            <span class="l-section__heading-sub">price</span>
           </h2>
-          <p class="section__lead">
+          <p class="l-section__lead">
             下記は参考価格です。<br />
             ドメイン、サーバーはお客様によるご負担が必要になります。<br />
             全てコーディングのみとなります。
           </p>
 
-          <table>
+          <table class="p-price__table">
             <thead>
               <tr>
-                <th colspan="2">トップページ</th>
+                <th class="p-price__th" colspan="2">トップページ</th>
               </tr>
             </thead>
-            <tbody class="tbody">
+            <tbody class="p-price__tbody">
               <tr>
-                <td>ヘッダー</td>
-                <td>4000円</td>
+                <td class="p-price__td">ヘッダー</td>
+                <td class="p-price__td">4000円</td>
               </tr>
               <tr>
-                <td>フッター</td>
-                <td>4000円</td>
+                <td class="p-price__td">フッター</td>
+                <td class="p-price__td">4000円</td>
               </tr>
               <tr>
-                <td>セクション数</td>
-                <td>3000円</td>
+                <td class="p-price__td">セクション数</td>
+                <td class="p-price__td">3000円</td>
               </tr>
             </tbody>
 
             <thead>
               <tr>
-                <th colspan="2">下層ページ</th>
+                <th class="p-price__th" colspan="2">下層ページ</th>
               </tr>
             </thead>
-            <tbody class="tbody">
+            <tbody class="p-price__tbody">
               <tr>
-                <td>～5000px</td>
-                <td>8000円</td>
+                <td class="p-price__td">～5000px</td>
+                <td class="p-price__td">8000円</td>
               </tr>
               <tr>
-                <td>～10,000px</td>
-                <td>12,000円</td>
+                <td class="p-price__td">～10,000px</td>
+                <td class="p-price__td">12,000円</td>
               </tr>
               <tr>
-                <td>～15,000px</td>
-                <td>16,000円</td>
+                <td class="p-price__td">～15,000px</td>
+                <td class="p-price__td">16,000円</td>
               </tr>
               <tr>
-                <td>～20,000px</td>
-                <td>20,000円</td>
+                <td class="p-price__td">～20,000px</td>
+                <td class="p-price__td">20,000円</td>
               </tr>
             </tbody>
 
             <thead>
               <tr>
-                <th colspan="2">アニメーション</th>
+                <th class="p-price__th" colspan="2">アニメーション</th>
               </tr>
             </thead>
-            <tbody class="tbody">
+            <tbody class="p-price__tbody">
               <tr>
-                <td>スライド</td>
-                <td>5000円</td>
+                <td class="p-price__td">スライド</td>
+                <td class="p-price__td">5000円</td>
               </tr>
               <tr>
-                <td>アコーディオン</td>
-                <td>5000円</td>
+                <td class="p-price__td">アコーディオン</td>
+                <td class="p-price__td">5000円</td>
               </tr>
               <tr>
-                <td>タブ切り替え</td>
-                <td>5000円</td>
+                <td class="p-price__td">タブ切り替え</td>
+                <td class="p-price__td">5000円</td>
               </tr>
               <tr>
-                <td>フェードイン</td>
-                <td>5000円</td>
+                <td class="p-price__td">フェードイン</td>
+                <td class="p-price__td">5000円</td>
               </tr>
               <tr>
-                <td>その他</td>
-                <td>5000円</td>
+                <td class="p-price__td">その他</td>
+                <td class="p-price__td">5000円</td>
               </tr>
             </tbody>
 
             <thead>
               <tr>
-                <th colspan="2">WordPress</th>
+                <th class="p-price__th" colspan="2">WordPress</th>
               </tr>
             </thead>
-            <tbody class="tbody">
+            <tbody class="p-price__tbody">
               <tr>
-                <td>オリジナルテーマ作成</td>
-                <td>35,000円</td>
+                <td class="p-price__td">オリジナルテーマ作成</td>
+                <td class="p-price__td">35,000円</td>
               </tr>
               <tr>
-                <td>ブログ機能</td>
-                <td>13,000円</td>
+                <td class="p-price__td">ブログ機能</td>
+                <td class="p-price__td">13,000円</td>
               </tr>
               <tr>
-                <td>お問い合わせ機能</td>
-                <td>13,000円</td>
+                <td class="p-price__td">お問い合わせ機能</td>
+                <td class="p-price__td">13,000円</td>
               </tr>
               <tr>
-                <td>検索機能</td>
-                <td>20,000円</td>
+                <td class="p-price__td">検索機能</td>
+                <td class="p-price__td">20,000円</td>
               </tr>
               <tr>
-                <td>カスタムフィールド</td>
-                <td>13,000円</td>
+                <td class="p-price__td">カスタムフィールド</td>
+                <td class="p-price__td">13,000円</td>
               </tr>
             </tbody>
           </table>
-
         </section>
-        <div class="full">
+        <div class="c-wave">
           <img
-          src="https://more-connect.github.io/portfolio/assets/img/wave.svg"
-          aria-hidden="true"
-          class="wave"
-          loading="lazy"
-          decoding="async"
-          alt=""
+            src="https://more-connect.github.io/portfolio/assets/img/wave.svg"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            alt=""
           />
         </div>
-        <section class="section section--bg">
-          <h2 class="section-title" id="contact">
-            <span class="section-title__main">お問い合わせ</span>
-            <span class="section-title__sub_reverse fadeIn">contact</span>
+        <section class="l-section l-section--bg">
+          <h2 class="l-section__heading" id="contact">
+            <span class="l-section__heading-main">お問い合わせ</span>
+            <span class="l-section__heading-sub--reverse">contact</span>
           </h2>
-          <p class="section__lead">あなたはこんな悩みをお持ちでないですか？</p>
-          <ul class="contact__list">
-            <li class="contact__item triangle-bottom js-line">
+          <p class="l-section__lead">
+            あなたはこんな悩みをお持ちでないですか？
+          </p>
+          <ul class="p-contact__list">
+            <li class="p-contact__item p-contact__item--triangle-bottom js-line">
               <p>初めてのホームページ作成、<br />何からすればいいの？</p>
             </li>
-            <li class="contact__item triangle-bottom js-line">
+            <li class="p-contact__item p-contact__item--triangle-bottom js-line">
               <p>Webサイトの運用を楽にしていきたい</p>
             </li>
-            <li class="contact__item triangle-bottom js-line">
+            <li class="p-contact__item p-contact__item--triangle-bottom js-line">
               <p>以前作ったサイトが<br />スマホに対応していない</p>
             </li>
           </ul>
-          <div class="contact__img">
+          <div class="p-contact__img">
             <img
               src="https://more-connect.github.io/portfolio/assets/img/nayami.png"
               alt=""
@@ -661,31 +649,31 @@
               height="163"
             />
           </div>
-          <ul class="contact__list">
-            <li class="contact__item triangle-top js-line">
+          <ul class="p-contact__list">
+            <li class="p-contact__item p-contact__item--triangle-top js-line">
               <p>機能の拡張をしていきたい</p>
             </li>
-            <li class="contact__item triangle-top js-line">
+            <li class="p-contact__item p-contact__item--triangle-top js-line">
               <p>お問い合わせフォームを作りたい</p>
             </li>
-            <li class="contact__item triangle-top js-line">
+            <li class="p-contact__item p-contact__item--triangle-top js-line">
               <p>すでにあるホームページを<br />リニューアルしたい</p>
             </li>
           </ul>
-          <p class="section__lead diagonal">
+          <p class="l-section__lead p-contact__lead">
             どんな些細なことでもいいですので、<br />お気軽にご相談ください。
           </p>
 
-          <div class="btn-center">
-            <a href="/portfolio/contact/" class="btn--contact btn--action"
+          <div class="p-contact__button-center">
+            <a href="/portfolio/contact/" class="c-button c-button--contact"
               ><span>お問い合わせページへ</span></a
             >
           </div>
         </section>
       </div>
     </main>
-    <footer class="footer">
-      <p class="footer__copyright">
+    <footer class="l-footer">
+      <p class="l-footer__copyright">
         <small lang="en">&copy; omrPortfolio 2023</small>
       </p>
     </footer>

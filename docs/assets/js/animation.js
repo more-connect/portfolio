@@ -59,7 +59,7 @@ window.onload = () => {
 
 const buttonTimelines = [];
 
-$(".btn").each(function (index, element) {
+$(".c-button").each(function (index, element) {
   const btnHoverTimeline = gsap
     .timeline({
       paused: true,
@@ -69,7 +69,7 @@ $(".btn").each(function (index, element) {
       duration: 0.2,
     })
     .to(
-      $(element).find(".hover_txt"),
+      $(element).find(".js-hovertext"),
       {
         yPercent: -100,
         duration: 0.2,
@@ -82,13 +82,13 @@ $(".btn").each(function (index, element) {
 });
 
 // ホバーイベントをボタンごとに設定
-$(".btn").hover(
+$(".c-button").hover(
   function () {
-    const index = $(".btn").index(this);
+    const index = $(".c-button").index(this);
     buttonTimelines[index].play();
   },
   function () {
-    const index = $(".btn").index(this);
+    const index = $(".c-button").index(this);
     buttonTimelines[index].reverse();
   }
 );
